@@ -6,7 +6,7 @@ import { toast } from 'sonner'
 import { useRouter } from 'next/navigation'
 import { CommentList } from './CommentList'
 import { formatDate } from '@/lib/utils'
-import type { Comment, Preview } from '@prisma/client'
+import type { Comment, Preview } from '@/types/prisma'
 
 type PreviewWithComments = Preview & { comments: Comment[] }
 
@@ -16,9 +16,9 @@ export function PreviewCard({ preview }: { preview: PreviewWithComments }) {
   const [deleting, setDeleting] = useState(false)
   const router = useRouter()
 
-  const shareUrl = `${window.location.origin}/p/${preview.shareId}`
-  const openCount = preview.comments.filter((c) => !c.resolved).length
-  const resolvedCount = preview.comments.filter((c) => c.resolved).length
+  const shareUrl = `${typeof window !== 'undefined' ? window.location.origin : ''}/p/${preview.shareId}`
+  const openCount = preview.comments.filter((c: Comment) => !c.resolved).length
+  const resolvedCount = preview.comments.filter((c: Comment) => c.resolved).length
 
   const copyLink = async () => {
     await navigator.clipboard.writeText(shareUrl)

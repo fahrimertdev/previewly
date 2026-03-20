@@ -5,14 +5,14 @@ import { Check, Trash2, RotateCcw } from 'lucide-react'
 import { toast } from 'sonner'
 import { useRouter } from 'next/navigation'
 import { formatDate } from '@/lib/utils'
-import type { Comment } from '@prisma/client'
+import type { Comment } from '@/types/prisma'
 
 export function CommentList({
   comments,
   previewId,
 }: {
   comments: Comment[]
-  previewId: string
+  previewId?: string
 }) {
   const router = useRouter()
   const [loading, setLoading] = useState<string | null>(null)

@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useRef, useCallback } from 'react'
-import type { Comment } from '@prisma/client'
+import type { Comment } from '@/types/prisma'
 import { PreviewToolbar } from './PreviewToolbar'
 import { CommentPin } from './CommentPin'
 import { CommentForm } from './CommentForm'

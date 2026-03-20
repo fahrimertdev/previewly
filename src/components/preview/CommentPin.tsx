@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import { cn } from '@/lib/utils'
-import type { Comment } from '@prisma/client'
+import type { Comment } from '@/types/prisma'
 
 interface Props {
   comment: Comment
