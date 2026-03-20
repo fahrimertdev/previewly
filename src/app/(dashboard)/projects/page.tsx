@@ -24,13 +24,13 @@ export default async function ProjectsPage() {
 
   if (projects.length === 0) {
     return (
-      <div className="flex flex-col items-center justify-center h-full min-h-[400px] px-4">
-        <div className="w-14 h-14 bg-blue-50 rounded-2xl flex items-center justify-center mb-4">
-          <FolderOpen size={24} className="text-blue-600" />
+      <div className="flex flex-col items-center justify-center min-h-[70vh] px-4">
+        <div className="w-20 h-20 bg-blue-50 rounded-3xl flex items-center justify-center mb-6">
+          <FolderOpen size={36} className="text-blue-500" />
         </div>
-        <h2 className="text-lg font-semibold text-gray-900 mb-1">No projects yet</h2>
-        <p className="text-sm text-gray-500 mb-6 text-center">
-          Create your first project to start sharing previews with clients.
+        <h2 className="text-2xl font-bold text-gray-900 mb-2">Create your first project</h2>
+        <p className="text-sm text-gray-500 mb-8 text-center max-w-xs leading-relaxed">
+          Projects let you organize previews per client. Share a link — they click to leave feedback, no account needed.
         </p>
         <CreateProjectButton />
       </div>
@@ -41,6 +41,7 @@ export default async function ProjectsPage() {
     <div className="p-8">
       <div className="flex items-center justify-between mb-6">
         <h1 className="text-2xl font-bold text-gray-900">Projects</h1>
+        <CreateProjectButton />
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">

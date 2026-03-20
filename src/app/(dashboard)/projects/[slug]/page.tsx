@@ -4,7 +4,8 @@ import { prisma } from '@/lib/prisma'
 import { notFound } from 'next/navigation'
 import { AddPreviewForm } from '@/components/dashboard/AddPreviewForm'
 import { PreviewCard } from '@/components/dashboard/PreviewCard'
-import { Link as LinkIcon } from 'lucide-react'
+import { Link as LinkIcon, ArrowLeft } from 'lucide-react'
+import Link from 'next/link'
 
 export default async function ProjectDetailPage({
   params,
@@ -32,6 +33,13 @@ export default async function ProjectDetailPage({
     <div className="p-8">
       <div className="flex items-center justify-between mb-6">
         <div>
+          <Link
+            href="/projects"
+            className="inline-flex items-center gap-1 text-xs text-gray-400 hover:text-gray-600 mb-2 transition-colors"
+          >
+            <ArrowLeft size={12} />
+            All projects
+          </Link>
           <h1 className="text-2xl font-bold text-gray-900">{project.name}</h1>
           <p className="text-sm text-gray-400 mt-0.5">
             {project.previews.length} preview{project.previews.length !== 1 ? 's' : ''}
