@@ -7,7 +7,7 @@ export default function LandingPage() {
       {/* Navbar */}
       <nav className="border-b border-gray-100 sticky top-0 bg-white/90 backdrop-blur-sm z-10">
         <div className="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
-          <span className="font-bold text-blue-600 text-xl">Previewly</span>
+          <span className="font-bold text-xl bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">Previewly</span>
           <div className="flex items-center gap-3">
             <Link href="/login" className="text-sm text-gray-600 hover:text-gray-900">
               Sign in
@@ -24,8 +24,8 @@ export default function LandingPage() {
 
       {/* Hero */}
       <section className="max-w-6xl mx-auto px-4 pt-20 pb-16 text-center">
-        <div className="inline-flex items-center gap-2 bg-blue-50 text-blue-700 text-xs font-medium px-3 py-1.5 rounded-full mb-6">
-          ✨ Free to use — no client account needed
+        <div className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-50 to-indigo-50 text-blue-700 text-xs font-semibold px-4 py-2 rounded-full mb-6 border border-blue-100 shadow-sm">
+          🚀 Now live — free to use, no client account needed
         </div>
         <h1 className="text-5xl font-bold text-gray-900 leading-tight tracking-tight mb-6 max-w-3xl mx-auto">
           Stop explaining designs{' '}
